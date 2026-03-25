@@ -34,9 +34,6 @@ export default function Nav() {
         <Link href="/goals" className="link">
           {t("goals")}
         </Link>
-        <Link href="/structure" className="link">
-          {t("structure")}
-        </Link>
         <Link href="/contribute" className="link">
           {t("contribute")}
         </Link>
@@ -52,13 +49,13 @@ export default function Nav() {
             onClick={() => switchLocale("ar")}
             className={`btn ${locale === "ar" ? "active" : ""}`}
           >
-            {t("arabic")}
+            AR
           </button>
           <button
             onClick={() => switchLocale("en")}
             className={`btn ${locale === "en" ? "active" : ""}`}
           >
-            {t("english")}
+            EN
           </button>
         </div>
       </div>

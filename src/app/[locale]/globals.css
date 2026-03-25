@@ -2,36 +2,36 @@
   /* Core Colors */
   --bg: #ffffff;
   --fg: #171717;
-  
+
   /* Brand Colors */
-  --primary: #004d00;
+  --primary: #16a34adb;
   --primary-fg: #ffffff;
-  
+
   /* UI Elements */
   --border: #e5e7eb;
   --input: #e5e7eb;
   --ring: var(--primary);
-  
+
   /* Muted / Secondary */
   --muted: #f3f4f6;
   --muted-fg: #6b7280;
   --secondary: #f3f4f6;
   --secondary-fg: #111827;
-  
+
   /* Accents */
   --accent: #e5e7eb;
   --accent-fg: #000000;
-  
+
   /* Semantic */
   --destructive: #ef4444;
   --destructive-fg: #ffffff;
-  
+
   /* Shadows & Radius */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --radius: 0.5rem;
-  
+
   /* Fonts */
   --font-cairo: var(--font-cairo);
 }

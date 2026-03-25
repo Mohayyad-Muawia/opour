@@ -1,14 +1,15 @@
 {
+  "Metadata": {
+    "title": "Opour Charity",
+    "description": "Opour Charity Organization - A premium platform for services."
+  },
   "Nav": {
     "orgTitle": "Opour Charity",
     "home": "Home",
     "about": "About Organization",
-    "goals": "Fields & Goals",
-    "structure": "Admin Structure",
+    "goals": "Goals & Methodology",
     "contribute": "Contribute with us",
-    "contact": "Contact Us",
-    "english": "EN",
-    "arabic": "AR"
+    "contact": "Contact Us"
   },
   "Hero": {
     "title": "Welcome to Opour",
