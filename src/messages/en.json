@@ -18,5 +18,21 @@
   "HomePage": {
     "title": "Welcome to Opour",
     "description": "A premium platform for services."
+  },
+  "AboutPage": {
+    "title": "About Opour Organization",
+    "description": "We are a charity organization seeking to empower youth and develop the community through education and development projects."
+  },
+  "GoalsPage": {
+    "title": "Our Goals & Methodology",
+    "description": "We strive to achieve sustainable development through clear strategic goals focusing on education, health, and economic empowerment."
+  },
+  "ContributePage": {
+    "title": "Contribute with Us",
+    "description": "Join us as a volunteer or participate by donating to support our ongoing charitable projects."
+  },
+  "ContactPage": {
+    "title": "Contact Us",
+    "description": "We are here to answer all your inquiries. Contact us through the available channels."
   }
 }
