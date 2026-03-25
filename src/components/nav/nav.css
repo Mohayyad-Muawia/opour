@@ -3,9 +3,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.5rem;
-  background-color: #ffffff;
+  background-color: var(--bg);
   border-bottom: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -22,9 +22,9 @@
 
     .toggle {
       display: flex;
-      background-color: #f3f4f6;
+      background-color: var(--muted);
       border: 1px solid var(--border);
-      border-radius: 0.5rem;
+      border-radius: var(--radius);
       padding: 2px;
       overflow: hidden;
 
@@ -35,17 +35,17 @@
         font-weight: 700;
         text-transform: uppercase;
         transition: all 0.3s ease;
-        color: #6b7280;
+        color: var(--muted-fg);
 
         &.active {
           background-color: var(--primary);
-          color: #ffffff;
-          box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+          color: var(--primary-fg);
+          box-shadow: var(--shadow-sm);
         }
 
         &:not(.active):hover {
-          color: #000000;
-          background-color: #e5e7eb;
+          color: var(--accent-fg);
+          background-color: var(--accent);
         }
       }
     }
@@ -56,7 +56,9 @@
     align-items: center;
     gap: 1.5rem;
     font-weight: 500;
-    color: #374151;
+    color: var(
+      --secondary-fg
+    ); /* Will update to variable if needed, but gray-700 is usually secondary text */
 
     @media (min-width: 1024px) {
       display: flex;
@@ -80,7 +82,7 @@
 
         .subtext {
           font-size: 10px;
-          color: #9ca3af;
+          color: var(--muted-fg);
           font-weight: 400;
           line-height: 1;
           margin-top: 2px;
@@ -113,7 +115,7 @@
 
       .subtitle {
         font-size: 10px;
-        color: #9ca3af;
+        color: var(--muted-fg);
         font-weight: 700;
         margin-top: -2px;
         line-height: 1;
@@ -128,12 +130,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 2px solid #f9fafb;
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      border: 2px solid var(--bg);
+      box-shadow: var(--shadow);
       transition: all 0.3s ease;
 
       .letter {
-        color: #ffffff;
+        color: var(--primary-fg);
         font-size: 1.5rem;
         font-weight: 700;
       }
