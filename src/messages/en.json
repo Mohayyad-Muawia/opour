@@ -1,0 +1,17 @@
+{
+  "Nav": {
+    "orgTitle": "Opour Charity",
+    "home": "Home",
+    "about": "About Organization",
+    "goals": "Fields & Goals",
+    "structure": "Admin Structure",
+    "contribute": "Contribute with us",
+    "contact": "Contact Us",
+    "english": "EN",
+    "arabic": "AR"
+  },
+  "HomePage": {
+    "title": "Welcome to Opour",
+    "description": "A premium platform for services."
+  }
+}
