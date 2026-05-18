@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import "./hero.css";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 const images = [
   "/imgs/h1.jpg",
@@ -20,22 +21,25 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="hero">
+    <section className="hero">
       {/* Background Slider */}
       <div className="hero-slider">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className={`hero-slide ${index === currentImageIndex ? "active" : ""}`}
-            style={{ backgroundImage: `url(${image})` }}
-          />
-        ))}
+        {images.map((image, index) => {
+          const isActive = index === currentImageIndex;
+          return (
+            <div
+              key={index}
+              className={`hero-slide ${isActive ? "active" : ""}`}
+              style={{ backgroundImage: `url(${image})` }}
+            />
+          );
+        })}
       </div>
 
       {/* Overlay */}
@@ -43,9 +47,23 @@ export default function Hero() {
 
       {/* Content */}
       <div className="hero-content">
-        <h1 className="title">{t("title")}</h1>
-        <p className="subtitle">{t("subtitle")}</p>
+        <div className="text-box">
+          <h1 className="title">{t("title")}</h1>
+          <p className="subtitle">{t("subtitle")}</p>
+        </div>
+
+        <div className="btns">
+          <Link href="/contribute" className="btn primary">
+            {t("contributeBtn")}
+          </Link>
+          <Link href="/about" className="btn secondary">
+            {t("aboutBtn")}
+          </Link>
+        </div>
+
+
+
       </div>
-    </div>
+    </section>
   );
 }

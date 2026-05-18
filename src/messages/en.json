@@ -13,7 +13,17 @@
   },
   "Hero": {
     "title": "Welcome to Opour",
-    "subtitle": "A charity organization aiming to serve the community and develop youth skills."
+    "subtitle": "A charity organization aiming to serve the community and develop youth skills.",
+    "aboutBtn": "About Organization",
+    "contributeBtn": "Contribute with us"
+  },
+  "StatusCards": {
+    "regNumber": "9707",
+    "regNumberSubTitle": "Registration Number",
+    "foundingYear": "2022",
+    "foundingYearSubTitle": "Founding Year",
+    "address": "Khartoum",
+    "addressSubTitle": "Organization Headquarters"
   },
   "HomePage": {
     "title": "Welcome to Opour",

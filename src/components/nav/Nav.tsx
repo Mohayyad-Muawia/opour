@@ -1,5 +1,7 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import "./nav.css";
@@ -17,11 +19,19 @@ export default function Nav() {
     router.replace(pathname, { locale: newLocale });
   };
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <nav className="nav glass">
+    <nav className={`nav ${scrolled ? "scrolled" : "glass"}`}>
       {/* Logo */}
       <div className="logo">
-        <Image src="/logo2.png" alt="Logo" width={50} height={50} />
+        <Image src="/logo2.png" alt="Logo" width={40} height={40} />
         <h3>{t("orgTitle")}</h3>
       </div>
 

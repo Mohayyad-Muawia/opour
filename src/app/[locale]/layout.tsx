@@ -1,4 +1,4 @@
-import { Cairo } from "next/font/google";
+import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -6,9 +6,10 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Nav from "@/components/nav/Nav";
 
-const cairo = Cairo({
-  variable: "--font-cairo",
+const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
+  variable: "--font-ibm-plex-sans-arabic",
   subsets: ["latin", "arabic"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
 export async function generateMetadata({
@@ -51,7 +52,7 @@ export default async function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" type="image/x-icon"></link>
       </head>
-      <body className={cairo.variable}>
+      <body className={ibmPlexSansArabic.variable}>
         <NextIntlClientProvider messages={messages}>
           <Nav />
           {children}

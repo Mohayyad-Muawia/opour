@@ -13,7 +13,17 @@
   },
   "Hero": {
     "title": "مرحباً بكم في أوبور",
-    "subtitle": "منظمة خيرية تهدف لخدمة المجتمع وتطوير مهارات الشباب."
+    "subtitle": "منظمة خيرية تهدف لخدمة المجتمع وتطوير مهارات الشباب.",
+    "aboutBtn": "تعرف علينا",
+    "contributeBtn": "ساهم معنا"
+  },
+  "StatusCards": {
+    "regNumber": "9707",
+    "regNumberSubTitle": "رقم التسجيل",
+    "foundingYear": "2022",
+    "foundingYearSubTitle": "سنة التأسيس",
+    "address": "الخرطوم",
+    "addressSubTitle": "مقر المنظمة"
   },
   "HomePage": {
     "title": "مرحباً بكم في أوبور",
