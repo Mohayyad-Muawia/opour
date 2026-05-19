@@ -61,6 +61,46 @@
         "title": "Transparency",
         "description": "Absolute integrity in every action."
       }
+    },
+    "Fields": {
+      "title": "Our Fields of Work",
+      "field_1": {
+        "title": "Public Health",
+        "p1": "Developing the health sector and medical services.",
+        "p2": "Deploying medical convoys to affected areas.",
+        "p3": "Supporting health institutions and technical staff."
+      },
+      "field_2": {
+        "title": "Education & Sports",
+        "p1": "Supporting educational institutions and schools.",
+        "p2": "Student sponsorship and providing study aids.",
+        "p3": "Contributing to the development of sports."
+      },
+      "field_3": {
+        "title": "Water & Environment",
+        "p1": "Well drilling and implementing water projects.",
+        "p2": "Combating desertification and resource protection.",
+        "p3": "Promoting safe mining and environmental health."
+      },
+      "field_4": {
+        "title": "Social Care",
+        "p1": "Caring for orphans, widows, and people with disabilities.",
+        "p2": "Prioritizing women, children, and family issues.",
+        "p3": "Supporting the vulnerable and tackling harmful habits."
+      },
+      "field_5": {
+        "title": "Livelihoods & Agriculture",
+        "p1": "Developing the agricultural sector for production.",
+        "p2": "Creating sustainable paths for independent living.",
+        "p3": "Fighting poverty through small production projects."
+      },
+      "field_6": {
+        "title": "Relief & Emergency",
+        "p1": "Relieving the displaced and supporting those in need.",
+        "p2": "Disaster risk reduction and urgent response.",
+        "p3": "Deploying integrated relief convoys and surveys."
+      },
+      "viewMore": "Know our Goals & Methodology"
     }
   },
   "AboutPage": {

@@ -1,0 +1,43 @@
+.fields {
+
+    .fields-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .field-item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3/2;
+        }
+
+        .text {
+            padding: 2rem;
+            padding-top: 1rem;
+
+            ul {
+                padding-inline-start: 1.8rem;
+                margin-top: .8rem;
+
+                li {
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+    }
+
+    .btn {
+        display: block;
+        width: fit-content;
+        margin-top: 2rem;
+        margin-inline: auto;
+    }
+}
