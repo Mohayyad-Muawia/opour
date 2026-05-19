@@ -1,0 +1,32 @@
+.about-snippet {
+    margin-top: 7rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+
+    .img-box {
+        img {
+            border-radius: var(--radius);
+            filter: grayscale(1);
+            box-shadow: var(--shadow-md);
+        }
+    }
+
+    .text {
+        width: 50%;
+
+        h1 {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: .8rem;
+        }
+
+        button {
+            margin-top: 1.5rem;
+        }
+    }
+}

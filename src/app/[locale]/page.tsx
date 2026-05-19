@@ -1,19 +1,18 @@
 "use client";
 
-import Hero from "@/components/hero/Hero";
-import StatusCards from "@/components/status cards/StatusCards";
+import AboutSnippet from "@/components/about snippet";
+import Hero from "@/components/hero";
+import StatusCards from "@/components/status cards";
 
 export default function Home() {
   return (
-    <div>
+    <main>
       <Hero />
       <StatusCards />
-
-
-      {/* About (Summary) */}
+      <AboutSnippet />
       {/* Objectives (Summary) */}
       {/* CTA*/}
       {/* Faq */}
-    </div>
+    </main>
   );
 }

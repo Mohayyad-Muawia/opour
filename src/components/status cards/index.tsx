@@ -1,9 +1,9 @@
 import { CalendarDays, MapPin, ShieldCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
-import "./StatusCards.css"
+import "./Status-cards.css"
 
 export default function StatusCards() {
-    const t = useTranslations("StatusCards");
+    const t = useTranslations("HomePage.StatusCards");
 
     return (
         <section className="status-cards">

@@ -11,23 +11,29 @@
     "contribute": "Contribute with us",
     "contact": "Contact Us"
   },
-  "Hero": {
-    "title": "Welcome to Opour",
-    "subtitle": "A charity organization aiming to serve the community and develop youth skills.",
-    "aboutBtn": "About Organization",
-    "contributeBtn": "Contribute with us"
-  },
-  "StatusCards": {
-    "regNumber": "9707",
-    "regNumberSubTitle": "Registration Number",
-    "foundingYear": "2022",
-    "foundingYearSubTitle": "Founding Year",
-    "address": "Khartoum",
-    "addressSubTitle": "Organization Headquarters"
-  },
   "HomePage": {
     "title": "Welcome to Opour",
-    "description": "A premium platform for services."
+    "description": "A premium platform for services.",
+    "Hero": {
+      "title": "Welcome to Opour",
+      "subtitle": "A charity organization aiming to serve the community and develop youth skills.",
+      "aboutBtn": "Know more",
+      "contributeBtn": "Contribute"
+    },
+    "StatusCards": {
+      "regNumber": "9707",
+      "regNumberSubTitle": "Registration Number",
+      "foundingYear": "2022",
+      "foundingYearSubTitle": "Founding Year",
+      "address": "Khartoum",
+      "addressSubTitle": "Organization Headquarters"
+    },
+    "AboutSnippet": {
+      "title": "About Opour",
+      "p1": "Opour Charity Organization is a Sudanese national voluntary entity, established in December 2022 and officially registered with the Humanitarian Aid Commission (HAC) under the Voluntary and Humanitarian Work Act of 2006. We believe that the transition towards a better future begins with empowering individuals and bridging developmental gaps through a purely national vision.",
+      "p2": "We dedicate our efforts to providing integrated developmental and relief support in the fields of Health, Education, and Environment. In all our programs, we focus on building the capacity of local communities and engaging national expertise both at home and abroad, to ensure sustainable impact and achieve the desired stability for the Sudanese society.",
+      "aboutBtn": "Discover More"
+    }
   },
   "AboutPage": {
     "title": "About Opour Organization",

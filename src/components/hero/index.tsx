@@ -15,7 +15,7 @@ const images = [
 ];
 
 export default function Hero() {
-  const t = useTranslations("Hero");
+  const t = useTranslations("HomePage.Hero");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
