@@ -33,6 +33,34 @@
       "p1": "Opour Charity Organization is a Sudanese national voluntary entity, established in December 2022 and officially registered with the Humanitarian Aid Commission (HAC) under the Voluntary and Humanitarian Work Act of 2006. We believe that the transition towards a better future begins with empowering individuals and bridging developmental gaps through a purely national vision.",
       "p2": "We dedicate our efforts to providing integrated developmental and relief support in the fields of Health, Education, and Environment. In all our programs, we focus on building the capacity of local communities and engaging national expertise both at home and abroad, to ensure sustainable impact and achieve the desired stability for the Sudanese society.",
       "aboutBtn": "Discover More"
+    },
+    "Values": {
+      "title": "Why Opour?",
+      "vision": {
+        "title": "Our Vision",
+        "description": "To be the leading national platform for achieving sustainable development and guiding Sudanese communities toward self-sufficiency and social well-being."
+      },
+      "mission": {
+        "title": "Our Mission",
+        "description": "Empowering Sudanese communities through innovative Health, Education, and Environmental programs, driven by national expertise and strategic partnerships to ensure sustainable development."
+      },
+      "title_2": "Our Values",
+      "value_1": {
+        "title": "Nationalism",
+        "description": "Local expertise for Sudan's growth."
+      },
+      "value_2": {
+        "title": "Innovation",
+        "description": "Smart solutions for lasting impact."
+      },
+      "value_3": {
+        "title": "Integration",
+        "description": "Synergy for comprehensive change."
+      },
+      "value_4": {
+        "title": "Transparency",
+        "description": "Absolute integrity in every action."
+      }
     }
   },
   "AboutPage": {

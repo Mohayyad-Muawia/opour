@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function AboutSnippet() {
     const t = useTranslations("HomePage.AboutSnippet");
     return (
-        <section className="about-snippet">
+        <section className="about-snippet container">
             <div className="img-box">
                 <Image src="/imgs/snippit.jpg" alt="About" width={350} height={350} />
             </div>

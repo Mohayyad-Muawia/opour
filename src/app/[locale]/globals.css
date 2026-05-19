@@ -1,10 +1,11 @@
 :root {
   /* Core Colors */
   --bg: #ffffff;
+  --bg-secondary: #f7f7f7;
   --fg: #171717;
 
   /* Brand Colors */
-  --primary: #16a34adb;
+  --primary: #16a34a;
   --primary-fg: #ffffff;
 
   /* UI Elements */
@@ -27,10 +28,11 @@
   --destructive-fg: #ffffff;
 
   /* Shadows & Radius */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
   --radius: 0.5rem;
+  --radius-lg: 1rem;
 
   /* Fonts */
   --font-ibm-plex-sans-arabic: var(--font-ibm-plex-sans-arabic);
@@ -61,6 +63,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  color: var(--muted-fg);
+}
+
 button {
   cursor: pointer;
   border: none;
@@ -80,6 +86,33 @@ button {
   .description {
     margin-top: 1rem;
     font-size: 1.25rem;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding-inline: 15rem;
+}
+
+section {
+  padding: 5rem 0;
+
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary);
   }
 }
 
@@ -110,10 +143,15 @@ button {
 }
 
 .card {
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   padding: 1.25rem;
   background: var(--bg);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-.5rem);
+  }
 }
