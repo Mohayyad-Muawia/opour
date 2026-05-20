@@ -76,14 +76,14 @@
         font-size: 0.75rem;
         font-weight: 700;
         text-transform: uppercase;
-        transition: all 0.3s ease;
+        transition: all 0.35s ease;
         color: var(--primary-fg);
         border-color: transparent;
 
         &.active {
           background-color: var(--primary);
           color: var(--primary-fg);
-          box-shadow: var(--shadow-sm);
+          box-shadow: var(--shadow);
         }
 
         &:not(.active):hover {
@@ -94,7 +94,7 @@
   }
 
   &.scrolled {
-    background: #ffffff;
+    background: var(--bg);
     box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
     backdrop-filter: none;
     -webkit-backdrop-filter: none;

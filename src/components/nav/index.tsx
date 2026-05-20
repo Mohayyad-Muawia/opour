@@ -23,12 +23,15 @@ export default function Nav() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [pathname]);
+
+  const isAtHomeTop = pathname === "/" && !scrolled;
 
   return (
-    <nav className={`nav ${scrolled ? "scrolled" : "glass"}`}>
+    <nav className={`nav ${isAtHomeTop ? "glass" : "scrolled"}`}>
       {/* Logo */}
       <div className="logo">
         <Image src="/logo2.png" alt="Logo" width={40} height={40} />
