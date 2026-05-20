@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import "./hero.css";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import AnimateOnScroll from "@/motion/AnimateOnScroll";
 
 const images = [
   "/imgs/h1.jpg",
@@ -48,17 +49,25 @@ export default function Hero() {
       {/* Content */}
       <div className="hero-content">
         <div className="text-box">
-          <h1 className="title">{t("title")}</h1>
-          <p className="subtitle">{t("subtitle")}</p>
+          <AnimateOnScroll type="fadeInUp">
+            <h1 className="title">{t("title")}</h1>
+          </AnimateOnScroll>
+          <AnimateOnScroll type="fadeInUp" delay={0.1}>
+            <p className="subtitle">{t("subtitle")}</p>
+          </AnimateOnScroll>
         </div>
 
         <div className="btns">
-          <Link href="/contribute" className="btn primary">
-            {t("contributeBtn")}
-          </Link>
-          <Link href="/about" className="btn secondary">
-            {t("aboutBtn")}
-          </Link>
+          <AnimateOnScroll type="fadeInUp" delay={0.1}>
+            <Link href="/contribute" className="btn primary">
+              {t("contributeBtn")}
+            </Link>
+          </AnimateOnScroll>
+          <AnimateOnScroll type="fadeInUp" delay={.15}>
+            <Link href="/about" className="btn secondary">
+              {t("aboutBtn")}
+            </Link>
+          </AnimateOnScroll>
         </div>
 
 

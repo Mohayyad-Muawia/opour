@@ -1,10 +1,11 @@
 "use client";
 
-import AboutSnippet from "@/components/about snippet";
-import Fields from "@/components/fields";
-import Hero from "@/components/hero";
-import StatusCards from "@/components/status cards";
-import Values from "@/components/values";
+import AboutSnippet from "@/components/home/about snippet";
+import Faq from "@/components/home/faq";
+import Fields from "@/components/home/fields";
+import Hero from "@/components/home/hero";
+import StatusCards from "@/components/home/status cards";
+import Values from "@/components/home/values";
 
 export default function Home() {
   return (
@@ -14,10 +15,10 @@ export default function Home() {
       <AboutSnippet />
       <Values />
       <Fields />
+      <Faq />
 
-      {/* Objectives (Summary) */}
       {/* CTA*/}
-      {/* Faq */}
+
     </main>
   );
 }

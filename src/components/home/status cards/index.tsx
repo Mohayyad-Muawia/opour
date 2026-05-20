@@ -1,13 +1,15 @@
 import { CalendarDays, MapPin, ShieldCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
 import "./Status-cards.css"
+import AnimateOnScroll from "@/motion/AnimateOnScroll";
 
 export default function StatusCards() {
     const t = useTranslations("HomePage.StatusCards");
 
     return (
+
         <section className="status-cards">
-            <div className="card">
+            <AnimateOnScroll className="card" delay={.2} type="fadeInUp">
                 <div className="icon">
                     <ShieldCheck />
                 </div>
@@ -15,9 +17,9 @@ export default function StatusCards() {
                     <b>{t("regNumber")}</b>
                     <p>{t("regNumberSubTitle")}</p>
                 </div>
-            </div>
+            </AnimateOnScroll>
 
-            <div className="card">
+            <AnimateOnScroll className="card" delay={.25} type="fadeInUp">
                 <div className="icon">
                     <CalendarDays />
                 </div>
@@ -25,9 +27,9 @@ export default function StatusCards() {
                     <b>{t("foundingYear")}</b>
                     <p>{t("foundingYearSubTitle")}</p>
                 </div>
-            </div>
+            </AnimateOnScroll>
 
-            <div className="card">
+            <AnimateOnScroll className="card" delay={.3} type="fadeInUp">
                 <div className="icon">
                     <MapPin />
                 </div>
@@ -35,7 +37,7 @@ export default function StatusCards() {
                     <b>{t("address")}</b>
                     <p>{t("addressSubTitle")}</p>
                 </div>
-            </div>
+            </AnimateOnScroll>
 
         </section>)
 }
