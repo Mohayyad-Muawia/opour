@@ -2,6 +2,8 @@
 import { Component, Eye, HandFist, Lightbulb, Target, Telescope } from "lucide-react";
 import "./values.css"
 import { useTranslations } from "next-intl";
+import { div, h2 } from "motion/react-client";
+import AnimateOnScroll from "@/motion/AnimateOnScroll";
 export default function Values() {
     const t = useTranslations("HomePage.Values");
 
@@ -37,9 +39,12 @@ export default function Values() {
     ];
     return (
         <section className="values container">
-            <h1 className="section-title">{t('title')}</h1>
+            <AnimateOnScroll type="fadeInUp">
+
+                <h1 className="section-title">{t('title')}</h1>
+            </AnimateOnScroll>
             <div className="vision-mission">
-                <div className="card">
+                <AnimateOnScroll type="fadeInLeft" delay={.1} className="card">
                     <div className="icon">
                         <Telescope />
                     </div>
@@ -47,8 +52,8 @@ export default function Values() {
                         <h2>{t('vision.title')}</h2>
                         <p>{t('vision.description')}</p>
                     </div>
-                </div>
-                <div className="card">
+                </AnimateOnScroll>
+                <AnimateOnScroll type="fadeInLeft" delay={.2} className="card">
                     <div className="icon">
                         <Target />
                     </div>
@@ -56,14 +61,15 @@ export default function Values() {
                         <h2>{t('mission.title')}</h2>
                         <p>{t('mission.description')}</p>
                     </div>
-                </div>
-            </div>
+                </AnimateOnScroll>
+            </div >
             <div className="values-list">
-                <h2>{t('title_2')}</h2>
-
+                <AnimateOnScroll type="fadeInUp" delay={.25} >
+                    <h2>{t('title_2')}</h2>
+                </AnimateOnScroll>
                 <div className="grid">
                     {values.map((value, index) => (
-                        <div className="card" key={index}>
+                        <AnimateOnScroll key={index} type="fadeInUp" delay={.3 + index * .1} className="card">
                             <div className="icon" style={{ color: value.color, backgroundColor: value.bg }}>
                                 <value.icon />
                             </div>
@@ -71,11 +77,11 @@ export default function Values() {
                                 <h4>{value.title}</h4>
                                 <p>{value.description}</p>
                             </div>
-                        </div>
+                        </AnimateOnScroll>
                     ))}
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 

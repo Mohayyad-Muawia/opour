@@ -103,7 +103,7 @@
       "viewMore": "Know our Goals & Methodology"
     },
     "Faq": {
-      "title": "Frequently Asked Questions",
+      "title": "FAQs",
       "question_1": {
         "question": "What is Opour Charity Organization?",
         "answer": "A Sudanese national voluntary organization dedicated to sustainable development and humanitarian relief for communities in need."
@@ -122,7 +122,7 @@
       },
       "question_5": {
         "question": "Where is the organization's headquarters located?",
-        "answer": "The main headquarters of Opour Organization is currently located in Soba East, which serves as the hub for all our administrative and field operations."
+        "answer": "The main headquarters of Opour Organization is currently located in Khartoum, which serves as the hub for all our administrative and field operations."
       }
     }
   },
@@ -141,5 +141,26 @@
   "ContactPage": {
     "title": "Contact Us",
     "description": "We are here to answer all your inquiries. Contact us through the available channels."
+  },
+  "Footer": {
+    "title": "Opour Organization",
+    "description": "A national voluntary organization dedicated to supporting and uplifting our communities through sustainable development and humanitarian aid.",
+    "quick_links": "Quick Links",
+    "links": {
+      "home": "Home",
+      "about": "About Us",
+      "goals": "Goals & Methodology",
+      "contribute": "Contribute"
+    },
+    "contact_us": "Contact Us",
+    "contact_info": {
+      "phone": "Phone",
+      "email": "info@opour.org",
+      "address": "Khartoum"
+    },
+    "social_media": "Our Socials",
+    "rights": "All rights reserved to Opour Charity Organization ©",
+    "dev_by": "Designed & Developed by",
+    "developer": "Mohayyad Moawia"
   }
 }

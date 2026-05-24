@@ -52,7 +52,7 @@ export default function AnimateOnScroll({
             variants={variants[type]}
             initial="hidden"
             animate={controls}
-            transition={{ duration: 0.5, delay }}
+            transition={{ duration: 0.5, delay: delay + .2 }}
         >
             {children}
         </motion.div>

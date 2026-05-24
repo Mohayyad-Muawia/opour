@@ -2,12 +2,13 @@ import { useTranslations } from "next-intl";
 import "./fields.css"
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
+import AnimateOnScroll from "@/motion/AnimateOnScroll";
 export default function Fields() {
     const t = useTranslations("HomePage.Fields");
 
     const fields = [
         {
-            id: 1,
+            id: 0,
             img: "/imgs/f1.jpg",
             title: t('field_1.title'),
             points: [
@@ -17,7 +18,7 @@ export default function Fields() {
             ]
         },
         {
-            id: 2,
+            id: 1,
             img: "/imgs/f2.jpg",
             title: t('field_2.title'),
             points: [
@@ -27,7 +28,7 @@ export default function Fields() {
             ]
         },
         {
-            id: 3,
+            id: 2,
             img: "/imgs/f3.jpg",
             title: t('field_3.title'),
             points: [
@@ -37,7 +38,7 @@ export default function Fields() {
             ]
         },
         {
-            id: 4,
+            id: 3,
             img: "/imgs/f4.jpg",
             title: t('field_4.title'),
             points: [
@@ -47,7 +48,7 @@ export default function Fields() {
             ]
         },
         {
-            id: 5,
+            id: 4,
             img: "/imgs/f5.jpg",
             title: t('field_5.title'),
             points: [
@@ -57,7 +58,7 @@ export default function Fields() {
             ]
         },
         {
-            id: 6,
+            id: 5,
             img: "/imgs/f6.jpg",
             title: t('field_6.title'),
             points: [
@@ -70,12 +71,14 @@ export default function Fields() {
 
     return (
         <section className="fields container">
-            <h1 className="section-title">{t('title')}</h1>
+            <AnimateOnScroll type="fadeInUp">
+                <h1 className="section-title">{t('title')}</h1>
+            </AnimateOnScroll>
 
             <div className="fields-list">
                 {
                     fields.map((f) => (
-                        <div key={f.id} className="field-item card">
+                        <AnimateOnScroll key={f.id} type="fadeInUp" delay={f.id * .1} className="field-item card">
                             <Image src={f.img} alt={f.title} width={400} height={300} />
                             <div className="text">
                                 <h2 className="field-title">{f.title}</h2>
@@ -85,13 +88,15 @@ export default function Fields() {
                                     ))}
                                 </ul>
                             </div>
-                        </div>
+                        </AnimateOnScroll>
                     ))
                 }
             </div>
-            <Link href={"/goals"} className="btn primary">
-                {t('viewMore')}
-            </Link>
+            <AnimateOnScroll type="fadeInUp" delay={.5}>
+                <Link href={"/goals"} className="btn primary">
+                    {t('viewMore')}
+                </Link>
+            </AnimateOnScroll>
         </section>
     )
 }
