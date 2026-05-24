@@ -17,9 +17,19 @@ export async function generateMetadata({
 export default function ContributePage() {
   const t = useTranslations("ContributePage");
   return (
-    <div className="page">
-      <h1 className="title">{t("title")}</h1>
-      <p className="description">{t("description")}</p>
-    </div>
+    <>
+      <header className="page-header" style={{ backgroundImage: "url('/imgs/cn.jpg')" }}>
+        <div className="header-content">
+          <h1 className="title">{t("title")}</h1>
+          <p className="description">{t("description")}</p>
+        </div>
+        <div className="overlay" />
+      </header>
+      <div className="page">
+        <div className="container">
+
+        </div>
+      </div>
+    </>
   );
 }

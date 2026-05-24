@@ -13,6 +13,7 @@
   /* UI Elements */
   --border: #e5e7eb;
 
+
   /* Shadows & Radius */
   --shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -63,6 +64,7 @@ button {
 /* Page Styles */
 .page {
   padding: 2rem;
+  margin-top: 4rem;
 
   .title {
     font-size: 2.25rem;
@@ -72,6 +74,47 @@ button {
   .description {
     margin-top: 1rem;
     font-size: 1.25rem;
+  }
+}
+
+.page-header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  margin-top: 72px;
+  color: var(--primary-fg);
+  position: relative;
+  height: 280px;
+  display: flex;
+  align-items: center;
+
+  .header-content {
+    position: relative;
+    flex: 1;
+    z-index: 2;
+
+    h1 {
+      margin-bottom: .4rem;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1e703b, #0a2a15);
+    z-index: 1;
+    opacity: 0.8;
+  }
+
+  p {
+    font-size: 1.2rem;
+    width: 50%;
+    color: var(--primary-fg);
+    opacity: .7;
   }
 }
 
