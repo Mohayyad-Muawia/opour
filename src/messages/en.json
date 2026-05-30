@@ -128,7 +128,59 @@
   },
   "AboutPage": {
     "title": "About Opour Organization",
-    "description": "We are a charity organization seeking to empower youth and develop the community through education and development projects."
+    "description": "We are a charity organization seeking to empower youth and develop the community through education and development projects.",
+    "info": {
+      "title": "About Us",
+      "subtitle": "Towards Integrated Community Empowerment Through Innovative Development Solutions",
+      "paragraph": "Opour Charity Organization is a national, non-profit Sudanese entity born from the heart of the community. Driven by a unified spirit and local expertise both home and abroad, we deliver sustainable solutions that directly impact lives and foster social stability through comprehensive humanitarian and developmental initiatives aligned with future aspirations.",
+      "list": [
+        "Officially Registered No. 9707",
+        "Established in December 2022",
+        "Headquartered in Khartoum",
+        "Independent National Voluntary Entity"
+      ]
+    },
+    "members": {
+      "title": "Executive Committee",
+      "list": [
+        {
+          "name": "Prof. Ahmed Farah Shadoul",
+          "position": "President"
+        },
+        {
+          "name": "Hon. Al-Fatih Mohammed Issa Taifour",
+          "position": "Vice President"
+        },
+        {
+          "name": "Col. Kamil Mahmoud Mohammed Ali",
+          "position": "General Secretary"
+        },
+        {
+          "name": "Eng. Muawia El-Zubair Abdoon",
+          "position": "Treasurer"
+        },
+        {
+          "name": "Taha Awad Abdulsultan",
+          "position": "Membership & Office Secretary"
+        },
+        {
+          "name": "Anwar Mustafa Al-Farsi",
+          "position": "Projects Secretary"
+        },
+        {
+          "name": "Al-Zubair Al-Zubair Hamad Al-Malik",
+          "position": "Coordination Secretary"
+        },
+        {
+          "name": "Mohi-Eldin Abdel-Majid",
+          "position": "Social Secretary"
+        },
+        {
+          "name": "Dr. Yasser Fouad Al-Sheikh",
+          "position": "Northern State Representative"
+        }
+      ]
+    }
   },
   "GoalsPage": {
     "title": "Our Goals & Methodology",

@@ -2,7 +2,6 @@
 import { Component, Eye, HandFist, Lightbulb, Target, Telescope } from "lucide-react";
 import "./values.css"
 import { useTranslations } from "next-intl";
-import { div, h2 } from "motion/react-client";
 import AnimateOnScroll from "@/motion/AnimateOnScroll";
 export default function Values() {
     const t = useTranslations("HomePage.Values");
