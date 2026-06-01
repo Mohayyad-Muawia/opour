@@ -184,7 +184,130 @@
   },
   "GoalsPage": {
     "title": "Our Goals & Methodology",
-    "description": "We strive to achieve sustainable development through clear strategic goals focusing on education, health, and economic empowerment."
+    "description": "We strive to achieve sustainable development through clear strategic goals focusing on education, health, and economic empowerment.",
+    "goals": {
+      "title": "Our Goals",
+      "goalsGrid": [
+        {
+          "id": "01",
+          "title": "Services Support",
+          "description": "Providing comprehensive support and assistance for public services."
+        },
+        {
+          "id": "02",
+          "title": "Healthcare Sector",
+          "description": "Operating extensively and professionally within the medical sector."
+        },
+        {
+          "id": "03",
+          "title": "Disaster Relief",
+          "description": "Assisting those in need, the impoverished, and disaster-stricken populations."
+        },
+        {
+          "id": "04",
+          "title": "Disaster Mitigation",
+          "description": "Focusing strictly on disaster mitigation and prevention of environmental risks."
+        },
+        {
+          "id": "05",
+          "title": "Educational Aid",
+          "description": "Providing comprehensive assistance in developing the education sector."
+        },
+        {
+          "id": "06",
+          "title": "Sports Development",
+          "description": "Contributing effectively to supporting sports and youth activities."
+        },
+        {
+          "id": "07",
+          "title": "Environmental Preservation",
+          "description": "Preserving nature, ecosystem balance, and natural resources."
+        },
+        {
+          "id": "08",
+          "title": "Safe Mining",
+          "description": "Promoting a structured culture of safe and sustainable mining practices."
+        },
+        {
+          "id": "09",
+          "title": "Sustainable Livelihoods",
+          "description": "Creating and empowering micro-economies and sustainable livelihoods."
+        },
+        {
+          "id": "10",
+          "title": "Combating Harmful Habits",
+          "description": "Raising community awareness to eliminate harmful traditional practices."
+        },
+        {
+          "id": "11",
+          "title": "Poverty Alleviation",
+          "description": "Deploying structural, long-term programs to combat poverty."
+        },
+        {
+          "id": "12",
+          "title": "Agricultural Advancement",
+          "description": "Developing and boosting the local agricultural sectors."
+        },
+        {
+          "id": "13",
+          "title": "Water Security",
+          "description": "Drilling wells and establishing water-provision networks to counter thirst."
+        },
+        {
+          "id": "14",
+          "title": "Women & Child Care",
+          "description": "Prioritizing women and children’s welfare and societal integration."
+        },
+        {
+          "id": "15",
+          "title": "Combating Desertification",
+          "description": "Executing continuous environmental actions to counter desertification."
+        },
+        {
+          "id": "16",
+          "title": "Social Sponsorship",
+          "description": "Sponsoring orphans, widows, the homeless, and individuals with disabilities."
+        }
+      ]
+    },
+    "methodology": {
+      "title": "Implementation Methodology",
+      "subtitle": "Our approved operational mechanisms to ensure maximum efficiency and impact",
+      "list": [
+        {
+          "title": "Capacity Building",
+          "desc": "Training and providing continuous support for medical, assisting, and technical cadres."
+        },
+        {
+          "title": "Field Activities",
+          "desc": "Organizing workshops, seminars, camps, and specialized medical convoys."
+        },
+        {
+          "title": "International Networking",
+          "desc": "Cooperating with similar local, regional, and international organizations."
+        },
+        {
+          "title": "Attracting Expertise",
+          "desc": "Leveraging the expertise of Sudanese medical cadres and professionals abroad."
+        },
+        {
+          "title": "Official Integration",
+          "desc": "Full and organized coordination with all relevant official authorities."
+        },
+        {
+          "title": "Knowledge Dissemination",
+          "desc": "Establishing public centers, scientific libraries, and providing awareness publications."
+        },
+        {
+          "title": "Urgent Response",
+          "desc": "Deploying urgent relief and health convoys to severely affected areas."
+        },
+        {
+          "title": "Scientific Evaluation",
+          "desc": "Conducting accurate field surveys to assess and design humanitarian projects."
+        }
+      ]
+    }
   },
   "ContributePage": {
     "title": "Contribute with Us",
