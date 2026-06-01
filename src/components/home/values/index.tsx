@@ -3,6 +3,7 @@ import { Component, Eye, HandFist, Lightbulb, Target, Telescope } from "lucide-r
 import "./values.css"
 import { useTranslations } from "next-intl";
 import AnimateOnScroll from "@/motion/AnimateOnScroll";
+import AnimatedCard from "@/components/shared/Animated-Card";
 export default function Values() {
     const t = useTranslations("HomePage.Values");
 
@@ -43,7 +44,7 @@ export default function Values() {
                 <h1 className="section-title">{t('title')}</h1>
             </AnimateOnScroll>
             <div className="vision-mission">
-                <AnimateOnScroll type="fadeInLeft" delay={.1} className="card">
+                <AnimatedCard type="fadeInLeft">
                     <div className="icon">
                         <Telescope />
                     </div>
@@ -51,8 +52,8 @@ export default function Values() {
                         <h2>{t('vision.title')}</h2>
                         <p>{t('vision.description')}</p>
                     </div>
-                </AnimateOnScroll>
-                <AnimateOnScroll type="fadeInLeft" delay={.2} className="card">
+                </AnimatedCard>
+                <AnimatedCard delay={.1} type="fadeInLeft">
                     <div className="icon">
                         <Target />
                     </div>
@@ -60,7 +61,7 @@ export default function Values() {
                         <h2>{t('mission.title')}</h2>
                         <p>{t('mission.description')}</p>
                     </div>
-                </AnimateOnScroll>
+                </AnimatedCard>
             </div >
             <div className="values-list">
                 <AnimateOnScroll type="fadeInUp" delay={.25} >
@@ -68,7 +69,7 @@ export default function Values() {
                 </AnimateOnScroll>
                 <div className="grid">
                     {values.map((value, index) => (
-                        <AnimateOnScroll key={index} type="fadeInUp" delay={.3 + index * .1} className="card">
+                        <AnimatedCard key={index} type="fadeInUp" delay={.3 + index * .1} className="card">
                             <div className="icon" style={{ color: value.color, backgroundColor: value.bg }}>
                                 <value.icon />
                             </div>
@@ -76,7 +77,7 @@ export default function Values() {
                                 <h4>{value.title}</h4>
                                 <p>{value.description}</p>
                             </div>
-                        </AnimateOnScroll>
+                        </AnimatedCard>
                     ))}
                 </div>
             </div>

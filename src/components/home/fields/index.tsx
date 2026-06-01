@@ -3,6 +3,7 @@ import "./fields.css"
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import AnimateOnScroll from "@/motion/AnimateOnScroll";
+import AnimatedCard from "@/components/shared/Animated-Card";
 export default function Fields() {
     const t = useTranslations("HomePage.Fields");
 
@@ -78,7 +79,7 @@ export default function Fields() {
             <div className="fields-list">
                 {
                     fields.map((f) => (
-                        <AnimateOnScroll key={f.id} type="fadeInUp" delay={f.id * .1} className="field-item card">
+                        <AnimatedCard key={f.id} type="fadeInUp" delay={f.id * .1} className="field-item card">
                             <Image src={f.img} alt={f.title} width={400} height={300} />
                             <div className="text">
                                 <h2 className="field-title">{f.title}</h2>
@@ -88,7 +89,7 @@ export default function Fields() {
                                     ))}
                                 </ul>
                             </div>
-                        </AnimateOnScroll>
+                        </AnimatedCard>
                     ))
                 }
             </div>

@@ -3,8 +3,8 @@ import { getTranslations } from "next-intl/server";
 import "./about.css";
 import Image from "next/image";
 import { CalendarDays, HandHeart, MapPin, ShieldCheck, User } from "lucide-react";
-import Card from "@/components/shared/card";
 import AnimateOnScroll from "@/motion/AnimateOnScroll";
+import AnimatedCard from "@/components/shared/Animated-Card";
 
 export async function generateMetadata({
   params,
@@ -132,15 +132,13 @@ export default function AboutPage() {
           <div className="grid">
             {
               members.map((member, index) => (
-                <AnimateOnScroll delay={index * 0.1} key={index}>
-                  <Card className="card" >
-                    <div className="icon">
-                      <User />
-                    </div>
-                    <b>{member.name}</b>
-                    <p>{member.position}</p>
-                  </Card>
-                </AnimateOnScroll>
+                <AnimatedCard className="card" delay={index * 0.1} key={index}>
+                  <div className="icon">
+                    <User />
+                  </div>
+                  <b>{member.name}</b>
+                  <p>{member.position}</p>
+                </AnimatedCard>
               ))
             }
           </div>
