@@ -1,0 +1,41 @@
+.contribute.page {
+    .forms {
+        .tabs {
+            display: flex;
+            background: var(--border);
+            width: fit-content;
+            border-radius: 16px;
+            overflow: hidden;
+            padding: 6px;
+            margin: 0 auto 4rem;
+
+            .tab {
+                position: relative;
+                color: var(--muted-fg);
+                border-radius: 12px;
+                padding: 12px 24px;
+                font-weight: 500;
+                cursor: pointer;
+                text-decoration: none;
+
+                .tab-label {
+                    position: relative;
+                    z-index: 2;
+                }
+
+                .active-bg {
+                    position: absolute;
+                    inset: 0;
+                    background: var(--bg);
+                    border-radius: 12px;
+                    box-shadow: var(--shadow-md);
+                    z-index: 1;
+                }
+
+                &.active {
+                    color: var(--foreground);
+                }
+            }
+        }
+    }
+}

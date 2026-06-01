@@ -6,6 +6,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import "./nav.css";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 export default function Nav() {
   const t = useTranslations("Nav");
@@ -40,21 +41,27 @@ export default function Nav() {
 
       {/* Navigation Links */}
       <div className="links">
-        <Link href="/" className={`link ${isActive("/")}`}>
-          {t("home")}
-        </Link>
-        <Link href="/about" className={`link ${isActive("/about")}`}>
-          {t("about")}
-        </Link>
-        <Link href="/goals" className={`link ${isActive("/goals")}`}>
-          {t("goals")}
-        </Link>
-        <Link href="/contribute" className={`link ${isActive("/contribute")}`}>
-          {t("contribute")}
-        </Link>
-        <Link href="/contact" className={`link ${isActive("/contact")}`}>
-          {t("contact")}
-        </Link>
+        {[
+          { href: "/", label: t("home") },
+          { href: "/about", label: t("about") },
+          { href: "/goals", label: t("goals") },
+          { href: "/contribute", label: t("contribute") },
+          { href: "/contact", label: t("contact") },
+        ].map(({ href, label }) => {
+          const active = pathname === href;
+          return (
+            <Link key={href} href={href} className={`link ${active ? "active" : ""}`}>
+              {active && (
+                <motion.div
+                  layoutId="active-nav-link"
+                  className="active-nav-bg"
+                  transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                />
+              )}
+              <span className="link-label">{label}</span>
+            </Link>
+          );
+        })}
       </div>
 
       {/* Language Switcher */}

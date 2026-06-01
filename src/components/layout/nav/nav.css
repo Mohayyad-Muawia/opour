@@ -42,20 +42,26 @@
       border-radius: var(--radius);
       transition: color 0.2s ease;
       position: relative;
+      text-decoration: none;
 
       &:hover {
         background-color: color-mix(in srgb, currentColor 10%, transparent);
       }
 
-      &.active::after {
-        content: "";
+      .link-label {
+        position: relative;
+        z-index: 2;
+      }
+
+      .active-nav-bg {
         position: absolute;
         bottom: 0;
-        left: 50%;
-        width: 80%;
-        transform: translateX(-50%);
+        left: 15%;
+        width: 70%;
         height: 2px;
-        background-color: var(--primary-fg);
+        border-radius: 99px;
+        background-color: currentColor;
+        z-index: 1;
       }
     }
   }
@@ -106,9 +112,7 @@
       color: var(--fg);
     }
 
-    .links .link.active::after {
-      background-color: var(--fg);
-    }
+
 
     .lang .toggle .btn.active {
       background-color: var(--fg);

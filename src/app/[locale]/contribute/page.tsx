@@ -1,5 +1,9 @@
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import './contribute.css';
+import Tabs from "./Tabs";
+import SupportForm from "./forms/SupportForm";
+import VolunteerForm from "./forms/VolunteerForm";
+import PartnershipForm from "./forms/PartnershipForm";
 
 export async function generateMetadata({
   params,
@@ -14,8 +18,16 @@ export async function generateMetadata({
   };
 }
 
-export default function ContributePage() {
-  const t = useTranslations("ContributePage");
+export default async function ContributePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+
+  const rawTab = (await searchParams).tab;
+  const tab = (Array.isArray(rawTab) ? rawTab[0] : rawTab) ?? "support";
+  const t = await getTranslations("ContributePage");
+
   return (
     <>
       <header className="page-header" style={{ backgroundImage: "url('/imgs/cn.jpg')" }}>
@@ -25,9 +37,16 @@ export default function ContributePage() {
         </div>
         <div className="overlay" />
       </header>
-      <div className="page">
+      <div className="contribute page">
         <div className="container">
-
+          <div className="forms">
+            <Tabs tab={tab} />
+            <div className="tab-content">
+              {tab === "support" && <SupportForm />}
+              {tab === "volunteering" && <VolunteerForm />}
+              {tab === "partnership" && <PartnershipForm />}
+            </div>
+          </div>
         </div>
       </div>
     </>

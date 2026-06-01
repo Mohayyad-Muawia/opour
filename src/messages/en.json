@@ -109,19 +109,19 @@
           "title": "Support & Contribution",
           "desc": "We are currently working to provide official channels for financial contributions. You can contact us to discuss ways to support our ongoing projects.",
           "action": "Contact to Contribute",
-          "link": "/contact?tab=support"
+          "link": "/contribute?tab=support"
         },
         {
           "title": "Join Us",
           "desc": "We are in the process of building a database for interested volunteers. You can register your interest so we can reach out once our volunteer programs launch.",
           "action": "Register Interest",
-          "link": "/contact?tab=volunteering"
+          "link": "/contribute?tab=volunteering"
         },
         {
           "title": "Development Partnerships",
           "desc": "We welcome collaboration with organizations and initiatives whose goals intersect with our vision to achieve sustainable impact.",
           "action": "Coordinate Partnership",
-          "link": "/contact?tab=partnership"
+          "link": "/contribute?tab=partnership"
         }
       ]
     },
@@ -333,8 +333,107 @@
     }
   },
   "ContributePage": {
-    "title": "Contribute with Us",
-    "description": "Join us as a volunteer or participate by donating to support our ongoing charitable projects."
+    "title": "Get Involved",
+    "description": "Join us as a volunteer or contribute a donation to support our ongoing charitable projects.",
+    "tabs": {
+      "support": "Project Support",
+      "volunteering": "Volunteering",
+      "partnership": "Partnership"
+    },
+    "forms": {
+      "support": {
+        "title": "Project Support",
+        "description": "We appreciate your desire to contribute; through this form, you can specify the project you wish to support, so our team can provide you with the necessary details to complete your contribution effectively.",
+        "fields": {
+          "name": {
+            "label": "Full Name",
+            "placeholder": "Enter your full name"
+          },
+          "email": {
+            "label": "Email Address",
+            "placeholder": "Enter your email address"
+          },
+          "phone": {
+            "label": "Phone Number",
+            "placeholder": "Enter your phone number"
+          },
+          "project_type": {
+            "label": "Project Type",
+            "placeholder": "Select project type",
+            "options": {
+              "": "Select project type"
+            }
+          },
+          "message": {
+            "label": "Message",
+            "placeholder": "Enter your message"
+          }
+        },
+        "submit": "Send Support Request"
+      },
+      "volunteering": {
+        "title": "Volunteering",
+        "description": "Our organization grows with the hands of volunteers; register your details and expertise here so we can invite you to participate in initiatives that suit your skills and available time.",
+        "fields": {
+          "name": {
+            "label": "Full Name",
+            "placeholder": "Enter your full name"
+          },
+          "email": {
+            "label": "Email Address",
+            "placeholder": "Enter your email address"
+          },
+          "phone": {
+            "label": "Phone Number (WhatsApp)",
+            "placeholder": "Enter your phone number"
+          },
+          "specialization": {
+            "label": "Professional Specialization",
+            "placeholder": "e.g., Doctor, Engineer, Translator..."
+          },
+          "availability": {
+            "label": "Availability Mode",
+            "options": {
+              "field": "On-field",
+              "remote": "Remote",
+              "hybrid": "Both"
+            }
+          },
+          "reason": {
+            "label": "Motivation for Volunteering",
+            "placeholder": "Why do you want to volunteer with Opour?"
+          }
+        },
+        "submit": "Send Volunteering Request"
+      },
+      "partnership": {
+        "title": "Developmental Partnership",
+        "description": "We believe in the power of joint action; if you represent an institution or initiative wishing to build a developmental partnership with us, please provide details of your cooperation proposal to discuss implementation.",
+        "fields": {
+          "org_name": {
+            "label": "Organization Name",
+            "placeholder": "Name of organization or initiative"
+          },
+          "org_type": {
+            "label": "Organization Type",
+            "placeholder": "e.g., International Organization, Local Initiative..."
+          },
+          "org_email": {
+            "label": "Official Email",
+            "placeholder": "example@opour.org"
+          },
+          "org_phone": {
+            "label": "Contact Number",
+            "placeholder": "+249123456789"
+          },
+          "proposal": {
+            "label": "Partnership Proposal Details",
+            "placeholder": "Briefly state the nature of the partnership you propose and the key aspects of possible cooperation."
+          }
+        },
+        "submit": "Send Partnership Proposal"
+      }
+    }
   },
   "ContactPage": {
     "title": "Contact Us",
