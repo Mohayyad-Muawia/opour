@@ -1,6 +1,7 @@
 "use client";
 
 import AboutSnippet from "@/components/home/about snippet";
+import CTA from "@/components/home/CTA";
 import Faq from "@/components/home/faq";
 import Fields from "@/components/home/fields";
 import Hero from "@/components/home/hero";
@@ -15,10 +16,8 @@ export default function Home() {
       <AboutSnippet />
       <Values />
       <Fields />
+      <CTA />
       <Faq />
-
-      {/* CTA*/}
-
     </main>
   );
 }

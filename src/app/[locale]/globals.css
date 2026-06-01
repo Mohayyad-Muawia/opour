@@ -166,7 +166,8 @@ section {
   }
 
   &.secondary {
-    border-color: var(--secondary);
+    border-color: var(--primary);
+    color: var(--primary);
   }
 
 }

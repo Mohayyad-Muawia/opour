@@ -83,6 +83,11 @@
       .btn {
         padding: .4rem 2rem;
         font-size: 1.25rem;
+
+        &.secondary {
+          border-color: var(--bg);
+          color: var(--secondary-fg);
+        }
       }
     }
   }

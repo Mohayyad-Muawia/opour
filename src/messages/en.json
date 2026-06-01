@@ -102,6 +102,29 @@
       },
       "viewMore": "Know our Goals & Methodology"
     },
+    "CTA": {
+      "title": "Avenues of Contribution",
+      "cards": [
+        {
+          "title": "Support & Contribution",
+          "desc": "We are currently working to provide official channels for financial contributions. You can contact us to discuss ways to support our ongoing projects.",
+          "action": "Contact to Contribute",
+          "link": "/contact?tab=support"
+        },
+        {
+          "title": "Join Us",
+          "desc": "We are in the process of building a database for interested volunteers. You can register your interest so we can reach out once our volunteer programs launch.",
+          "action": "Register Interest",
+          "link": "/contact?tab=volunteering"
+        },
+        {
+          "title": "Development Partnerships",
+          "desc": "We welcome collaboration with organizations and initiatives whose goals intersect with our vision to achieve sustainable impact.",
+          "action": "Coordinate Partnership",
+          "link": "/contact?tab=partnership"
+        }
+      ]
+    },
     "Faq": {
       "title": "FAQs",
       "question_1": {
