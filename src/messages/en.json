@@ -355,13 +355,21 @@
           },
           "phone": {
             "label": "Phone Number",
-            "placeholder": "Enter your phone number"
+            "placeholder": "+249xxxxxxxxx"
           },
           "project_type": {
             "label": "Project Type",
             "placeholder": "Select project type",
             "options": {
-              "": "Select project type"
+              "": "Select Project Type",
+              "health": "Healthcare & Medical Convoys",
+              "water": "Well Drilling & Water Security",
+              "environment": "Environment & Anti-Desertification",
+              "education": "Education Sector Support",
+              "emergency": "Emergency Relief & Disaster Management",
+              "social": "Orphan Care & Women Empowerment",
+              "development": "Agricultural Development & Livelihoods",
+              "general": "General Support"
             }
           },
           "message": {
@@ -385,7 +393,7 @@
           },
           "phone": {
             "label": "Phone Number (WhatsApp)",
-            "placeholder": "Enter your phone number"
+            "placeholder": "+249xxxxxxxxx"
           },
           "specialization": {
             "label": "Professional Specialization",

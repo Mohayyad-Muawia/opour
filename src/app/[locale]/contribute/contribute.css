@@ -1,5 +1,7 @@
 .contribute.page {
     .forms {
+        padding-inline: 15rem;
+
         .tabs {
             display: flex;
             background: var(--border);
@@ -13,14 +15,21 @@
                 position: relative;
                 color: var(--muted-fg);
                 border-radius: 12px;
-                padding: 12px 24px;
+                padding: 12px 30px;
                 font-weight: 500;
                 cursor: pointer;
                 text-decoration: none;
+                border: none;
+                background: transparent;
+                font-family: inherit;
+                font-size: inherit;
 
                 .tab-label {
                     position: relative;
                     z-index: 2;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
                 }
 
                 .active-bg {

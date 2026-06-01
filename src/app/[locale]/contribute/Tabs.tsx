@@ -1,38 +1,50 @@
-"use client"
+"use client";
 import { motion } from "motion/react";
-import { Link } from "@/i18n/routing";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { HandHeart, Users, Handshake } from "lucide-react";
 
-export default function Tabs({ tab }: { tab: string }) {
+const tabsList = [
+    { id: "support", icon: HandHeart },
+    { id: "volunteering", icon: Users },
+    { id: "partnership", icon: Handshake },
+] as const;
+
+export default function Tabs() {
     const t = useTranslations("ContributePage");
+    const searchParams = useSearchParams();
+    const router = useRouter();
+    const tab = searchParams.get("tab") || "support";
 
-    const tabsList = [
-        { id: "support", label: t("tabs.support") },
-        { id: "volunteering", label: t("tabs.volunteering") },
-        { id: "partnership", label: t("tabs.partnership") },
-    ];
+    const navigate = (id: string) => {
+        router.push(`/contribute?tab=${id}`, { scroll: false });
+    };
 
     return (
         <div className="tabs">
-            {tabsList.map((item) => {
-                const isActive = tab === item.id;
+            {tabsList.map(({ id, icon: Icon }) => {
+                const isActive = tab === id;
                 return (
-                    <Link
-                        key={item.id}
-                        href={`/contribute?tab=${item.id}`}
+                    <button
+                        key={id}
+                        onClick={() => navigate(id)}
                         className={`tab ${isActive ? "active" : ""}`}
                     >
                         {isActive && (
                             <motion.div
                                 layoutId="active-tab"
                                 className="active-bg"
-                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                transition={{ type: "spring", stiffness: 350, damping: 30 }}
                             />
                         )}
-                        <span className="tab-label">{item.label}</span>
-                    </Link>
+                        <span className="tab-label">
+                            <Icon size={16} />
+                            {t(`tabs.${id}`)}
+                        </span>
+                    </button>
                 );
             })}
         </div>
-    )
+    );
 }

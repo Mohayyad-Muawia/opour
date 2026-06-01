@@ -1,9 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import './contribute.css';
-import Tabs from "./Tabs";
-import SupportForm from "./forms/SupportForm";
-import VolunteerForm from "./forms/VolunteerForm";
-import PartnershipForm from "./forms/PartnershipForm";
+import FormsSection from "./forms/FormsSection";
 
 export async function generateMetadata({
   params,
@@ -18,14 +15,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function ContributePage({
-  searchParams,
-}: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-}) {
-
-  const rawTab = (await searchParams).tab;
-  const tab = (Array.isArray(rawTab) ? rawTab[0] : rawTab) ?? "support";
+export default async function ContributePage() {
   const t = await getTranslations("ContributePage");
 
   return (
@@ -39,14 +29,7 @@ export default async function ContributePage({
       </header>
       <div className="contribute page">
         <div className="container">
-          <div className="forms">
-            <Tabs tab={tab} />
-            <div className="tab-content">
-              {tab === "support" && <SupportForm />}
-              {tab === "volunteering" && <VolunteerForm />}
-              {tab === "partnership" && <PartnershipForm />}
-            </div>
-          </div>
+          <FormsSection />
         </div>
       </div>
     </>
