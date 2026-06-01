@@ -3,6 +3,8 @@ import { getTranslations } from "next-intl/server";
 import "./about.css";
 import Image from "next/image";
 import { CalendarDays, HandHeart, MapPin, ShieldCheck, User } from "lucide-react";
+import Card from "@/components/shared/card";
+import AnimateOnScroll from "@/motion/AnimateOnScroll";
 
 export async function generateMetadata({
   params,
@@ -62,72 +64,89 @@ export default function AboutPage() {
     <>
       <header className="page-header" style={{ backgroundImage: "url('/imgs/ab.jpg')" }}>
         <div className="header-content">
-          <h1 className="title">{t("title")}</h1>
-          <p className="description">{t("description")}</p>
+          <AnimateOnScroll type="fadeInRight">
+            <h1 className="title">{t("title")}</h1>
+          </AnimateOnScroll>
+          <AnimateOnScroll delay={.1} type="fadeInRight">
+            <p className="description">{t("description")}</p>
+          </AnimateOnScroll>
         </div>
         <div className="overlay" />
       </header>
 
       <div className="about page container" >
-
         <section className="info">
-          <div className="img-box">
-            <Image src="/imgs/info.jpg" alt="info" width={600} height={450} />
-            <div className="frame" />
-          </div>
+          <AnimateOnScroll delay={.05}>
+            <div className="img-box">
+              <Image src="/imgs/info.jpg" alt="info" width={600} height={450} />
+            </div>
+          </AnimateOnScroll>
 
           <div className="text">
-            <h3>{t("info.title")}</h3>
-            <h1>{t("info.subtitle")}</h1>
-            <p>{t("info.paragraph")}</p>
+            <AnimateOnScroll delay={.1}>
+              <h3>{t("info.title")}</h3>
+            </AnimateOnScroll>
+            <AnimateOnScroll delay={.2}>
+              <h1>{t("info.subtitle")}</h1>
+            </AnimateOnScroll>
+            <AnimateOnScroll delay={.3}>
+              <p>{t("info.paragraph")}</p>
+            </AnimateOnScroll>
 
             <div className="list">
-              <div className="item">
+              <AnimateOnScroll delay={.4} className="item">
                 <div className="icon" style={{ backgroundColor: "#16a34a20", color: "#16a34a" }}>
                   <ShieldCheck />
                 </div>
                 <b>{t("info.list.0")}</b>
-              </div>
-              <div className="item">
+              </AnimateOnScroll>
+
+              <AnimateOnScroll delay={.5} className="item">
                 <div className="icon" style={{ backgroundColor: "#e6bc2227", color: "#e6bc22ff" }}>
                   <CalendarDays />
                 </div>
                 <b>{t("info.list.1")}</b>
-              </div>
-              <div className="item">
+              </AnimateOnScroll>
+
+              <AnimateOnScroll delay={.6} className="item">
                 <div className="icon" style={{ backgroundColor: "#00a5d81a", color: "#00a5d8" }}>
                   <MapPin />
                 </div>
                 <b>{t("info.list.2")}</b>
-              </div>
-              <div className="item">
+              </AnimateOnScroll>
+
+              <AnimateOnScroll delay={.7} className="item">
                 <div className="icon" style={{ backgroundColor: "#af53df1a", color: "#af53df" }}>
                   <HandHeart />
                 </div>
                 <b>{t("info.list.3")}</b>
-              </div>
+              </AnimateOnScroll>
             </div>
-          </div>
-        </section>
+          </div >
+        </section >
 
         <section className="members">
-          <h1 className="section-title">{t("members.title")}</h1>
+          <AnimateOnScroll>
+            <h1 className="section-title">{t("members.title")}</h1>
+          </AnimateOnScroll>
           <div className="grid">
             {
               members.map((member, index) => (
-                <div className="card" key={index}>
-                  <div className="icon">
-                    <User />
-                  </div>
-                  <b>{member.name}</b>
-                  <p>{member.position}</p>
-                </div>
+                <AnimateOnScroll delay={index * 0.1} key={index}>
+                  <Card className="card" >
+                    <div className="icon">
+                      <User />
+                    </div>
+                    <b>{member.name}</b>
+                    <p>{member.position}</p>
+                  </Card>
+                </AnimateOnScroll>
               ))
             }
           </div>
         </section>
 
-      </div>
+      </div >
     </>
   );
 }
