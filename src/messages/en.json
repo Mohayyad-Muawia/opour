@@ -335,6 +335,11 @@
   "ContributePage": {
     "title": "Get Involved",
     "description": "Join us as a volunteer or contribute a donation to support our ongoing charitable projects.",
+    "notice": {
+      "title": "Important Notice",
+      "description": "Official banking channels and accounts are currently being established and will be announced immediately upon approval.",
+      "button": "Contact for Inquiries"
+    },
     "tabs": {
       "support": "Project Support",
       "volunteering": "Volunteering",
@@ -445,7 +450,49 @@
   },
   "ContactPage": {
     "title": "Contact Us",
-    "description": "We are here to answer all your inquiries. Contact us through the available channels."
+    "description": "We are here to answer all your inquiries. Contact us through the available channels.",
+    "info": {
+      "title": "Contact Information",
+      "description": "You can reach us through the following information",
+      "address": {
+        "label": "Headquarters",
+        "value": "Khartoum, Sudan"
+      },
+      "email": {
+        "label": "Email Address",
+        "value": "info@opour.org"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "value": "+249XXXXXXXXX"
+      }
+    },
+    "socials": {
+      "title": "Social Media"
+    },
+    "form": {
+      "title": "Send Us a Direct Message",
+      "description": "We will review your message and reply to you as soon as possible.",
+      "fields": {
+        "name": {
+          "label": "Full Name",
+          "placeholder": "Enter your full name"
+        },
+        "email": {
+          "label": "Email Address",
+          "placeholder": "Enter your email address"
+        },
+        "subject": {
+          "label": "Subject",
+          "placeholder": "What is the subject of your message?"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Write your message here..."
+        }
+      },
+      "submit": "Send Message"
+    }
   },
   "Footer": {
     "title": "Opour Organization",
@@ -466,6 +513,6 @@
     "social_media": "Our Socials",
     "rights": "All rights reserved to Opour Charity Organization ©",
     "dev_by": "Designed & Developed by",
-    "developer": "Mohayyad Moawia"
+    "developer": "Mohayyad Muawia"
   }
 }

@@ -1,6 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import './contribute.css';
 import FormsSection from "./forms/FormsSection";
+import { Link } from "@/i18n/routing";
+import { CircleAlert } from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -27,8 +29,23 @@ export default async function ContributePage() {
         </div>
         <div className="overlay" />
       </header>
+
       <div className="contribute page">
         <div className="container">
+          <div className="notice card">
+            <div className="icon">
+              <CircleAlert />
+            </div>
+            <div className="text">
+              <h2>{t('notice.title')}</h2>
+              <p>
+                {t('notice.description')}
+              </p>
+            </div>
+            <Link href="/contact" className="btn primary">
+              {t('notice.button')}
+            </Link>
+          </div>
           <FormsSection />
         </div>
       </div>

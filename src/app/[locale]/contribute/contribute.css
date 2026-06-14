@@ -1,6 +1,48 @@
 .contribute.page {
+    margin-top: 0;
+
+    .notice {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 3rem auto 5rem;
+        width: 90%;
+        padding: 1.7rem 3rem;
+
+        .icon {
+            height: 60px;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #16a34a1a;
+            color: var(--primary);
+            margin-inline-end: 1rem;
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .text {
+            h2 {
+                margin-bottom: .6rem;
+            }
+        }
+
+        .btn {
+            margin-inline-start: auto;
+            min-width: max-content;
+            padding: .6rem 1.6rem;
+        }
+    }
+
+
     .forms {
-        padding-inline: 15rem;
+        padding-inline: 18rem;
+        margin: 5rem 0;
 
         .tabs {
             display: flex;

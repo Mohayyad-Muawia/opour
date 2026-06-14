@@ -1,5 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
+// @ts-ignore: side-effect import for CSS
 import "./forms.css";
 
 export default function PartnershipForm() {
