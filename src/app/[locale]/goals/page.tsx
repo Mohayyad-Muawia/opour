@@ -1,4 +1,29 @@
-import { AlertTriangle, Ban, BookOpen, Briefcase, ClipboardCheck, Coins, Droplet, Globe, GraduationCap, HandHelping, Handshake, HardHat, Heart, HeartPulse, Landmark, Leaf, LucideIcon, ShieldAlert, Sprout, Tent, Trees, Trophy, Truck, Users2 } from "lucide-react";
+import {
+  AlertTriangle,
+  Ban,
+  BookOpen,
+  Briefcase,
+  ClipboardCheck,
+  Coins,
+  Droplet,
+  Globe,
+  GraduationCap,
+  HandHelping,
+  Handshake,
+  HardHat,
+  Heart,
+  HeartPulse,
+  Landmark,
+  Leaf,
+  LucideIcon,
+  ShieldAlert,
+  Sprout,
+  Tent,
+  Trees,
+  Trophy,
+  Truck,
+  Users2,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import "./goals.css";
@@ -52,13 +77,13 @@ const methodologyIcons: Record<number, LucideIcon> = {
   4: Landmark,
   5: BookOpen,
   6: Truck,
-  7: ClipboardCheck
+  7: ClipboardCheck,
 };
 
 export default function GoalsPage() {
   const t = useTranslations("GoalsPage");
 
-  const goals: Goal[] = t.raw('goals.goalsGrid').map((goal: Goal) => {
+  const goals: Goal[] = t.raw("goals.goalsGrid").map((goal: Goal) => {
     const Icon = iconMap[goal.id];
     return {
       ...goal,
@@ -66,20 +91,29 @@ export default function GoalsPage() {
     };
   });
 
-  const methodology: any[] = t.raw('methodology.list').map((method: any, index: number) => {
-    const Icon = methodologyIcons[index];
-    return {
-      ...method,
-      icon: Icon,
-    };
-  });
+  const methodology: any[] = t
+    .raw("methodology.list")
+    .map((method: any, index: number) => {
+      const Icon = methodologyIcons[index];
+      return {
+        ...method,
+        icon: Icon,
+      };
+    });
 
   return (
     <>
-      <header className="page-header" style={{ backgroundImage: "url('/imgs/gm.jpg')" }}>
+      <header
+        className="page-header"
+        style={{ backgroundImage: "url('/imgs/gm.jpg')" }}
+      >
         <div className="header-content">
-          <h1 className="title">{t("title")}</h1>
-          <p className="description">{t("description")}</p>
+          <AnimateOnScroll type="fadeInRight">
+            <h1 className="title">{t("title")}</h1>
+          </AnimateOnScroll>
+          <AnimateOnScroll type="fadeInRight" delay={0.1}>
+            <p className="description">{t("description")}</p>
+          </AnimateOnScroll>
         </div>
         <div className="overlay" />
       </header>
@@ -91,8 +125,18 @@ export default function GoalsPage() {
           </AnimateOnScroll>
           <div className="grid">
             {goals.map((goal) => (
-              <AnimatedCard className="card" key={goal.id} delay={0.05 * Number(goal.id)}>
-                {goal.icon ? <div className="icon"><goal.icon className="icon" /> </div> : <HandHelping className="icon" />}
+              <AnimatedCard
+                className="card"
+                key={goal.id}
+                delay={0.05 * Number(goal.id)}
+              >
+                {goal.icon ? (
+                  <div className="icon">
+                    <goal.icon className="icon" />{" "}
+                  </div>
+                ) : (
+                  <HandHelping className="icon" />
+                )}
                 <div className="text">
                   <h3>{goal.title}</h3>
                   <p>{goal.description}</p>
@@ -121,8 +165,6 @@ export default function GoalsPage() {
             ))}
           </div>
         </section>
-
-
       </div>
     </>
   );

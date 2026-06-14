@@ -10,8 +10,7 @@
             margin-bottom: .5rem;
         }
 
-        .text,
-        form {
+      >div{
             flex: 1;
         }
 
