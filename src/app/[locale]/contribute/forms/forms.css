@@ -69,3 +69,12 @@
 
     }
 }
+
+
+@media (max-width: 480px) {
+    .form{
+        .fields{
+            grid-template-columns: 1fr !important;
+        }
+    }
+}

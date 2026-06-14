@@ -114,3 +114,29 @@
         }
     }
 }
+
+@media (max-width: 480px) {
+  .about.page {
+    .info {
+      flex-direction: column;
+      gap: 2rem;
+
+      .img-box {
+        margin: 0;
+
+        img {
+          width: 100%;
+          transform: none;
+        }
+      }
+
+      .text .list .item {
+        width: 100%;
+      }
+    }
+
+    .members .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

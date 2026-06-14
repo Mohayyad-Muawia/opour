@@ -41,7 +41,7 @@ export default async function ContributePage() {
       <div className="contribute page">
         <div className="container">
           <AnimateOnScroll>
-            <div className="notice card">
+            <div className="notice card bordered">
               <div className="icon">
                 <CircleAlert />
               </div>

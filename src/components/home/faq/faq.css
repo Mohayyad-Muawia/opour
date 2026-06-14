@@ -68,3 +68,21 @@
         }
     }
 }
+
+@media (max-width: 480px) {
+    .faq {
+        padding-inline: 0;
+
+        .item {
+            .question {
+                padding: 15px;
+            }
+
+            .answer {
+                p {
+                    padding: 15px;
+                }
+            }
+        }
+    }
+}

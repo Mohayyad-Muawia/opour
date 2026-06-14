@@ -90,3 +90,40 @@
         }
     }
 }
+
+@media (max-width: 480px) {
+    .contribute.page {
+        .notice {
+            padding: 1rem;
+            flex-direction: column;
+            text-align: center;
+            margin: 2rem 0;
+            width: 100%;
+
+            .icon {
+                margin-inline-end: 0;
+            }
+
+            .btn {
+                margin-inline-start: 0;
+                margin-top: 1rem;
+            }
+        }
+
+        .forms {
+            padding-inline: 0;
+
+            .tabs {
+                margin-bottom: 2rem;
+                .tab {
+                    padding: 10px 15px;
+                    font-size: 0.875rem;
+                }
+            }
+
+            .card{
+                padding: 1rem;
+            }
+        }
+    }
+}

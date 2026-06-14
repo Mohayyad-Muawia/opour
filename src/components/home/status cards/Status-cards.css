@@ -48,3 +48,28 @@
         }
     }
 }
+
+@media (max-width: 480px) {
+    .status-cards {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2.5rem;
+        margin-top: -5rem;
+
+        .card {
+            padding: 1.2rem;
+            width: fit-content;
+            justify-content: center;
+
+            .icon {
+                width: 4rem;
+                height: 4rem;
+            }
+
+            .text {
+                text-align: center;
+                padding-inline-end: 2rem;
+            }
+        }
+    }
+}

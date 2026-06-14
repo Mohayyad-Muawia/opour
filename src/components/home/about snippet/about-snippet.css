@@ -28,3 +28,21 @@
         }
     }
 }
+
+@media (max-width: 480px) {
+    .about-snippet {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2.5rem;
+
+        .img-box {
+            img {
+                width: 85vw;
+                height: auto;
+                aspect-ratio: 1;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}

@@ -126,7 +126,7 @@ export default function GoalsPage() {
           <div className="grid">
             {goals.map((goal) => (
               <AnimatedCard
-                className="card"
+                className="card bordered"
                 key={goal.id}
                 delay={0.05 * Number(goal.id)}
               >

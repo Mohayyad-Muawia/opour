@@ -13,12 +13,12 @@
   /* UI Elements */
   --border: #e5e7eb;
 
-
   /* Shadows & Radius */
   --shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
 
   --radius: 0.5rem;
   --radius-lg: 1rem;
@@ -28,6 +28,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
@@ -75,7 +76,7 @@ form {
     gap: 0.5rem;
 
     &.half {
-      width: calc(50% - .75rem);
+      width: calc(50% - 0.75rem);
     }
 
     label {
@@ -95,7 +96,9 @@ form {
       color: var(--fg);
       font-size: 0.95rem;
       font-family: inherit;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
       outline: none;
 
       &::placeholder {
@@ -104,7 +107,8 @@ form {
 
       &:focus {
         border-color: var(--primary);
-        box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 15%, transparent);
+        box-shadow: 0 0 0 3px
+          color-mix(in srgb, var(--primary) 15%, transparent);
       }
     }
 
@@ -120,12 +124,11 @@ form {
       background-repeat: no-repeat;
       background-position: left 1rem center;
     }
-
   }
 
   .submit {
-    margin-top: .5rem;
-    padding: .6rem;
+    margin-top: 0.5rem;
+    padding: 0.6rem;
     width: 100%;
   }
 }
@@ -141,7 +144,7 @@ form {
     font-weight: 700;
   }
 
-  >.description {
+  > .description {
     margin-top: 1rem;
     font-size: 1.25rem;
   }
@@ -165,7 +168,7 @@ form {
     z-index: 2;
 
     h1 {
-      margin-bottom: .4rem;
+      margin-bottom: 0.4rem;
     }
   }
 
@@ -184,7 +187,7 @@ form {
     font-size: 1.2rem;
     width: 50%;
     color: var(--primary-fg);
-    opacity: .7;
+    opacity: 0.7;
   }
 }
 
@@ -195,7 +198,6 @@ form {
 
 section {
   padding: 5rem 0;
-
 }
 
 .section-title {
@@ -239,7 +241,6 @@ section {
     border-color: var(--primary);
     color: var(--primary);
   }
-
 }
 
 .card {
@@ -250,5 +251,49 @@ section {
 
   &.bordered {
     border-inline-start: 5px solid var(--primary);
+  }
+}
+
+@media (max-width: 480px) {
+  .hide-sm {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding-inline: 1rem;
+  }
+
+  .page {
+    padding: 0.8rem;
+  }
+
+  .page-header {
+    padding: 2rem 1rem;
+    height: fit-content;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+
+  form {
+    .field {
+      &.half {
+        width: 100%;
+      }
+    }
   }
 }

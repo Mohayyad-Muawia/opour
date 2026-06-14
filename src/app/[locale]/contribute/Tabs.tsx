@@ -39,7 +39,7 @@ export default function Tabs() {
               />
             )}
             <span className="tab-label">
-              <Icon size={16} />
+              <Icon size={16} className="hide-sm" />
               {t(`tabs.${id}`)}
             </span>
           </button>

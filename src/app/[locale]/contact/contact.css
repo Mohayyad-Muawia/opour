@@ -93,3 +93,16 @@
         }
     }
 }
+
+@media (max-width: 480px) {
+    .contact.page {
+        .container {
+            flex-flow: column-reverse;
+            gap: 2rem;
+        }
+
+        form{
+            margin-bottom: 2rem;
+        }
+    }
+}
