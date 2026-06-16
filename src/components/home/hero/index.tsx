@@ -5,6 +5,7 @@ import "./hero.css";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import AnimateOnScroll from "@/motion/AnimateOnScroll";
+import Button from "@/components/shared/button";
 
 const images = [
   "/imgs/h1.jpg",
@@ -59,19 +60,16 @@ export default function Hero() {
 
         <div className="btns">
           <AnimateOnScroll type="fadeInUp" delay={0.1}>
-            <Link href="/contribute" className="btn primary">
+            <Button href="/contribute" className="btn primary">
               {t("contributeBtn")}
-            </Link>
+            </Button>
           </AnimateOnScroll>
-          <AnimateOnScroll type="fadeInUp" delay={.15}>
-            <Link href="/about" className="btn secondary">
+          <AnimateOnScroll type="fadeInUp" delay={0.15}>
+            <Button href="/about" className="btn secondary">
               {t("aboutBtn")}
-            </Link>
+            </Button>
           </AnimateOnScroll>
         </div>
-
-
-
       </div>
     </section>
   );

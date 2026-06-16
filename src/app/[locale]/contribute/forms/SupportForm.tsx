@@ -4,6 +4,7 @@ import "./forms.css";
 import { useActionState, useEffect, useRef, useTransition } from "react";
 import { sendSupportEmail } from "@/actions";
 import toast from "react-hot-toast";
+import Button from "@/components/shared/button";
 
 export default function SupportForm() {
   const t = useTranslations("ContributePage.forms.support");
@@ -101,13 +102,13 @@ export default function SupportForm() {
             required
           />
         </div>
-        <button
+        <Button
           type="submit"
           className="btn primary submit"
           disabled={isLoading}
         >
           {isLoading ? t("submit.submitting") : t("submit.idle")}
-        </button>
+        </Button>
       </form>
     </div>
   );

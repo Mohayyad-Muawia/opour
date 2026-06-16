@@ -1,5 +1,6 @@
 "use client";
 import { sendContactEmail } from "@/actions";
+import Button from "@/components/shared/button";
 import { useTranslations } from "next-intl";
 import { useActionState, useEffect, useRef, useTransition } from "react";
 import toast from "react-hot-toast";
@@ -85,9 +86,9 @@ export default function ContactForm() {
         />
       </div>
 
-      <button type="submit" className="submit btn primary" disabled={isLoading}>
+      <Button type="submit" className="submit btn primary" disabled={isLoading}>
         {isLoading ? t("form.submit.submitting") : t("form.submit.idle")}
-      </button>
+      </Button>
     </form>
   );
 }

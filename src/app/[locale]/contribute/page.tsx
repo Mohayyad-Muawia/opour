@@ -1,9 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import "./contribute.css";
 import FormsSection from "./forms/FormsSection";
-import { Link } from "@/i18n/routing";
 import { CircleAlert } from "lucide-react";
 import AnimateOnScroll from "@/motion/AnimateOnScroll";
+import Button from "@/components/shared/button";
 
 export async function generateMetadata({
   params,
@@ -49,9 +49,9 @@ export default async function ContributePage() {
                 <h2>{t("notice.title")}</h2>
                 <p>{t("notice.description")}</p>
               </div>
-              <Link href="/contact" className="btn primary">
+              <Button href="/contact" className="btn primary">
                 {t("notice.button")}
-              </Link>
+              </Button>
             </div>
           </AnimateOnScroll>
           <FormsSection />

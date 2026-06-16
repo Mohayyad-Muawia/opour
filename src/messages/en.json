@@ -22,11 +22,11 @@
     },
     "StatusCards": {
       "regNumber": "9707",
-      "regNumberSubTitle": "Registration Number",
+      "regNumberSubTitle": "Registration No.",
       "foundingYear": "2022",
       "foundingYearSubTitle": "Founding Year",
       "address": "Khartoum",
-      "addressSubTitle": "Organization Headquarters"
+      "addressSubTitle": "Headquarters"
     },
     "AboutSnippet": {
       "title": "About Opour",

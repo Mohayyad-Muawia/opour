@@ -4,6 +4,7 @@ import "./forms.css";
 import { useActionState, useEffect, useRef, useTransition } from "react";
 import { sendVolunteerEmail } from "@/actions";
 import toast from "react-hot-toast";
+import Button from "@/components/shared/button";
 
 export default function VolunteerForm() {
   const t = useTranslations("ContributePage.forms.volunteering");
@@ -111,13 +112,13 @@ export default function VolunteerForm() {
           />
         </div>
 
-        <button
+        <Button
           type="submit"
           className="btn primary submit"
           disabled={isLoading}
         >
           {isLoading ? t("submit.submitting") : t("submit.idle")}
-        </button>
+        </Button>
       </form>
     </div>
   );

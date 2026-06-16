@@ -1,75 +1,86 @@
 .status-cards {
-    position: relative;
-    z-index: 5;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  margin-top: -3.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+  padding: 0;
+
+  .card {
     display: flex;
-    margin-top: -3.5rem;
+    width: 20%;
     align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    width: 100%;
-    padding: 0;
+    gap: 2rem;
 
-    .card {
-        display: flex;
-        width: 20%;
-        align-items: center;
-        gap: 2rem;
+    .icon {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-        .icon {
-            width: 4rem;
-            height: 4rem;
-            border-radius: 50%;
-            background: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            svg {
-                width: 2rem;
-                height: 2rem;
-                color: var(--primary-fg);
-            }
-        }
-
-        .text {
-            text-align: start;
-
-            b {
-                font-size: 1.5rem;
-                font-weight: 700;
-                color: var(--fg);
-                margin-bottom: .25rem;
-            }
-
-            p {
-                font-size: .9rem;
-                color: var(--muted-fg);
-            }
-        }
+      svg {
+        width: 2rem;
+        height: 2rem;
+        color: var(--primary-fg);
+      }
     }
+
+    .text {
+      text-align: start;
+
+      b {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--fg);
+        margin-bottom: 0.25rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: var(--muted-fg);
+      }
+    }
+  }
 }
 
 @media (max-width: 480px) {
-    .status-cards {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 2.5rem;
-        margin-top: -5rem;
+  .status-cards {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem;
+    margin-top: -5rem;
 
-        .card {
-            padding: 1.2rem;
-            width: fit-content;
-            justify-content: center;
+    .card {
+      min-width: 100%;
+      padding: 1.2rem;
+      width: fit-content;
+      justify-content: center;
 
-            .icon {
-                width: 4rem;
-                height: 4rem;
-            }
+      .icon {
+        width: 4rem;
+        height: 4rem;
+        aspect-ratio: 1;
+      }
 
-            .text {
-                text-align: center;
-                padding-inline-end: 2rem;
-            }
+      .text {
+        text-align: center;
+        padding-inline-end: 2rem;
+        flex: 1;
+
+        b {
+          font-size: 1.2rem;
         }
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
     }
+  }
 }
