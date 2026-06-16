@@ -112,7 +112,7 @@ function LangSwitcher() {
   const router = useRouter();
 
   const switchLocale = (newLocale: "en" | "ar") => {
-    router.replace(pathname, { locale: newLocale });
+    router.replace(pathname, { locale: newLocale, scroll: false });
   };
 
   return (
