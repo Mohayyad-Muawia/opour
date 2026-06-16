@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import "./contact.css";
 import AnimateOnScroll from "@/motion/AnimateOnScroll";
+import ContactForm from "./ContactForm";
 
 export async function generateMetadata({
   params,
@@ -101,7 +102,7 @@ export default function ContactPage() {
                   </a>
                   <a
                     className="card"
-                    href="https://www.facebook.com/opour.sd"
+                    href="https://web.facebook.com/profile.php?id=61584970924828"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -114,7 +115,7 @@ export default function ContactPage() {
                   </a>
                   <a
                     className="card"
-                    href="https://www.x.com/opour.sd"
+                    href="https://x.com/opour_org"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -127,7 +128,7 @@ export default function ContactPage() {
                   </a>
                   <a
                     className="card"
-                    href="https://www.linkedin.com/company/opour"
+                    href="https://www.linkedin.com/company/opour-org"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -145,57 +146,7 @@ export default function ContactPage() {
           </div>
 
           <AnimateOnScroll delay={0.5}>
-            <form action="" className="card">
-              <div className="header">
-                <h2>{t("form.title")}</h2>
-                <p>{t("form.description")}</p>
-              </div>
-              <div className="field half">
-                <label htmlFor="name">{t("form.fields.name.label")}</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder={t("form.fields.name.placeholder")}
-                />
-              </div>
-
-              <div className="field half">
-                <label htmlFor="email">{t("form.fields.email.label")}</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder={t("form.fields.email.placeholder")}
-                />
-              </div>
-
-              <div className="field">
-                <label htmlFor="subject">
-                  {t("form.fields.subject.label")}
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder={t("form.fields.subject.placeholder")}
-                />
-              </div>
-
-              <div className="field">
-                <label htmlFor="message">
-                  {t("form.fields.message.label")}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder={t("form.fields.message.placeholder")}
-                />
-              </div>
-              <button type="submit" className="submit btn primary">
-                {t("form.submit")}
-              </button>
-            </form>
+            <ContactForm />
           </AnimateOnScroll>
         </div>
       </div>

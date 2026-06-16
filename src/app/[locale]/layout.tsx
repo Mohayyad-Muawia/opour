@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
+import { Toaster } from "react-hot-toast";
 
 const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   variable: "--font-ibm-plex-sans-arabic",
@@ -52,6 +53,19 @@ export default async function RootLayout({
       </head>
       <body className={ibmPlexSansArabic.variable}>
         <NextIntlClientProvider messages={messages}>
+          <Toaster
+            position="bottom-center"
+            toastOptions={
+              {
+                // style: {
+                //   fontFamily: "inherit",
+                //   borderRadius: "10px",
+                //   background: "#fff",
+                //   color: "#334155",
+                // },
+              }
+            }
+          />
           <Nav />
           {children}
           <Footer />

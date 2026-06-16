@@ -382,7 +382,10 @@
             "placeholder": "Enter your message"
           }
         },
-        "submit": "Send Support Request"
+        "submit": {
+          "idle": "Send Support Request",
+          "submitting": "Sending..."
+        }
       },
       "volunteering": {
         "title": "Volunteering",
@@ -417,7 +420,10 @@
             "placeholder": "Why do you want to volunteer with Opour?"
           }
         },
-        "submit": "Send Volunteering Request"
+        "submit": {
+          "idle": "Send Volunteering Request",
+          "submitting": "Sending..."
+        }
       },
       "partnership": {
         "title": "Developmental Partnership",
@@ -444,7 +450,10 @@
             "placeholder": "Briefly state the nature of the partnership you propose and the key aspects of possible cooperation."
           }
         },
-        "submit": "Send Partnership Proposal"
+        "submit": {
+          "idle": "Send Partnership Proposal",
+          "submitting": "Sending..."
+        }
       }
     }
   },
@@ -491,7 +500,10 @@
           "placeholder": "Write your message here..."
         }
       },
-      "submit": "Send Message"
+      "submit": {
+        "idle": "Send Message",
+        "submitting": "Sending..."
+      }
     }
   },
   "Footer": {
@@ -514,5 +526,10 @@
     "rights": "All rights reserved to Opour Charity Organization ©",
     "dev_by": "Designed & Developed by",
     "developer": "Mohayyad Muawia"
+  },
+  "Toast": {
+    "success": "Message sent successfully",
+    "error": "Failed to send message",
+    "unknownError": "An unexpected error occurred, please try again later"
   }
 }

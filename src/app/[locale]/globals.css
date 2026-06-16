@@ -63,6 +63,12 @@ button {
   font-family: inherit;
 }
 
+button:disabled,
+button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
 form {
   display: flex;
   flex-wrap: wrap;
@@ -126,6 +132,16 @@ form {
     }
   }
 
+  .field:has(input:required, select:required, textarea:required):not(.radio)
+    label::after {
+    content: " *";
+    color: var(--primary);
+  }
+
+  .field:has(input[type="radio"]:required) > label::after {
+    content: " *";
+    color: var(--primary);
+  }
   .submit {
     margin-top: 0.5rem;
     padding: 0.6rem;
